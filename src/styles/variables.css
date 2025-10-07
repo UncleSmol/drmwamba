@@ -1,0 +1,47 @@
+:root {
+  /* Custom Color Scheme */
+  --primary-green: #198754;
+  --secondary-blue: #0d6efd;
+  --green-100: #d1e7dd;
+  --green-200: #a3cfbb;
+  --green-300: #75b798;
+  --green-400: #479f76;
+  --green-500: #198754;
+  --green-600: #146c43;
+  --green-700: #0f5132;
+  --green-800: #0a3622;
+  --green-900: #051b11;
+
+  --blue-100: #cfe2ff;
+  --blue-200: #9ec5fe;
+  --blue-300: #6ea8fe;
+  --blue-400: #3d8bfd;
+  --blue-500: #0d6efd;
+  --blue-600: #0a58ca;
+  --blue-700: #084298;
+  --blue-800: #052c65;
+  --blue-900: #031633;
+
+  /* Bootstrap Variable Overrides */
+  --bs-primary: var(--primary-green);
+  --bs-secondary: var(--secondary-blue);
+  --bs-primary-rgb: 25, 135, 84;
+  --bs-secondary-rgb: 13, 110, 253;
+
+  /* Theme colors */
+  --bs-success: var(--green-500);
+  --bs-info: var(--blue-500);
+
+  /* Link colors */
+  --bs-link-color: var(--bs-primary);
+  --bs-link-hover-color: var(--green-600);
+
+  /* Button colors */
+  --bs-btn-hover-bg: var(--green-600);
+  --bs-btn-active-bg: var(--green-700);
+
+  /* Navbar customization */
+  --bs-navbar-color: rgba(255, 255, 255, 0.9);
+  --bs-navbar-hover-color: rgba(255, 255, 255, 1);
+  --bs-navbar-active-color: #fff;
+}
