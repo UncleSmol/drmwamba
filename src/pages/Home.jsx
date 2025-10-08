@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import HomeHeroVideo from "../assets/heroVideoBG.mp4";
 import preventiveCare from "../assets/preventiveCare.mp4";
@@ -11,6 +12,7 @@ const Homepage = () => {
   const [progress, setProgress] = useState(0);
   const progressRef = useRef();
   const intervalRef = useRef();
+  const navigate = useNavigate();
 
   const services = [
     {
@@ -142,6 +144,7 @@ const Homepage = () => {
               className="btn btn-light btn-lg px-4"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate("/hours")}
             >
               <i className="bi bi-calendar-check me-2"></i>Book Appointment
             </motion.button>
@@ -150,7 +153,9 @@ const Homepage = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <i className="bi bi-telephone me-2"></i>Emergency Contact
+              <a href="tel:10177" className="text-decoration-none text-light">
+                <i className="bi bi-telephone me-2"></i>Emergency Contact
+              </a>
             </motion.button>
           </motion.div>
         </motion.div>
@@ -215,7 +220,7 @@ const Homepage = () => {
         <div className="overlay" />
         <motion.div
           className="service-content text-center text-white px-3"
-          key={currentServiceIndex}
+          key={services[currentServiceIndex].title}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -235,6 +240,7 @@ const Homepage = () => {
             className="btn btn-primary btn-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            onClick={() => navigate("/services")}
           >
             Learn More About This Service
           </motion.button>
